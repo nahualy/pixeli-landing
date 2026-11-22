@@ -1,0 +1,85 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <a class="site-footer__brand" href="/" aria-label="Pixeli, inicio">
+      <img src="/logos/pixeli-horizontal.svg" alt="" width="270" height="72" loading="lazy" />
+    </a>
+    <div class="site-footer__details">
+      <p>Email: <span>pendiente de aportar</span></p>
+      <p>Instagram: <span>pendiente de aportar</span></p>
+    </div>
+    <a class="site-footer__legal" href="/aviso-legal/">Aviso legal</a>
+    <p class="site-footer__copyright">© {currentYear} Pixeli</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid color-mix(in srgb, var(--color-lime) 16%, transparent);
+    color: var(--color-bone);
+  }
+
+  .site-footer__inner {
+    display: grid;
+    width: min(calc(100% - 2rem), 80rem);
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    margin-inline: auto;
+    padding-block: 2.5rem;
+  }
+
+  .site-footer__brand img {
+    display: block;
+    width: 9rem;
+    height: auto;
+  }
+
+  .site-footer__details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    grid-column: 1 / -1;
+    font-size: 0.875rem;
+  }
+
+  .site-footer__details p,
+  .site-footer__copyright {
+    margin: 0;
+  }
+
+  .site-footer__details span {
+    color: color-mix(in srgb, var(--color-bone) 65%, transparent);
+  }
+
+  .site-footer__legal {
+    justify-self: end;
+    text-decoration-color: var(--color-violet);
+    text-underline-offset: 0.35em;
+  }
+
+  .site-footer__copyright {
+    grid-column: 1 / -1;
+    color: color-mix(in srgb, var(--color-bone) 65%, transparent);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 48.01rem) {
+    .site-footer__inner {
+      grid-template-columns: 1fr auto auto;
+      padding-block: 3rem;
+    }
+
+    .site-footer__details {
+      grid-column: auto;
+    }
+
+    .site-footer__copyright {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

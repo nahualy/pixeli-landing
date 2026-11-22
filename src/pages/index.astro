@@ -1,0 +1,26 @@
+---
+import About from "@/components/sections/About.astro";
+import Contact from "@/components/sections/Contact.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Marquee from "@/components/sections/Marquee.astro";
+import Process from "@/components/sections/Process.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Services from "@/components/sections/Services.astro";
+import Footer from "@/components/layout/Footer.astro";
+import Header from "@/components/layout/Header.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Pixeli" description="Landing page de Pixeli.">
+  <Header />
+  <main id="main-content" tabindex="-1">
+    <Hero />
+    <Marquee />
+    <Services />
+    <Projects />
+    <Process />
+    <About />
+    <Contact />
+  </main>
+  <Footer />
+</BaseLayout>
